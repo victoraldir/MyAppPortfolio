@@ -16,6 +16,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sendMessage(View view) {
-        Toast.makeText(this,((Button) view).getText().toString(),Toast.LENGTH_SHORT);
+
+        String btnLabel = ((Button) view).getText().toString().toLowerCase();
+
+        Toast.makeText(this,getString(R.string.toast_message, btnLabel),Toast.LENGTH_SHORT).show();
     }
 }
